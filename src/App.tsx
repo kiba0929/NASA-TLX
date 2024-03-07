@@ -142,7 +142,7 @@ function App() {
           maxWidth: "800px",
         }}
       >
-        タスク実施後のアンケート
+        アンケート
       </Paper>
       {pages.map((p, i) => {
         return <Page isShow={page === i}>{p}</Page>;
