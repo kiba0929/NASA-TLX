@@ -3,6 +3,9 @@ import { FC, createRef, useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { AnswerState, nasaTLXAnswerState } from "./store/answerState";
 
+// 目盛りを表示
+const viewAnswerScale = false;
+
 const QuestionContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
@@ -152,7 +155,7 @@ const NasaTLXQuestion: FC<QuestionProps> = (props) => {
   };
 
   const updateAnswer = (x: number) => {
-    if(props.id == -1){
+    if (props.id == -1) {
       return;
     }
     const answer = Math.round(((x / svg_info.width - 0.01) / 0.98) * 100);
@@ -215,23 +218,27 @@ const NasaTLXQuestion: FC<QuestionProps> = (props) => {
               stroke="black"
               strokeWidth="5"
             />
-            {LineList}
-            <line
-              x1="1%"
-              y1="50%"
-              x2="1%"
-              y2="100%"
-              stroke="black"
-              strokeWidth="2.5"
-            />
-            <line
-              x1="99%"
-              y1="50%"
-              x2="99%"
-              y2="100%"
-              stroke="black"
-              strokeWidth="2.5"
-            />
+            {viewAnswerScale && (
+              <>
+                {LineList}
+                <line
+                  x1="1%"
+                  y1="50%"
+                  x2="1%"
+                  y2="100%"
+                  stroke="black"
+                  strokeWidth="2.5"
+                />
+                <line
+                  x1="99%"
+                  y1="50%"
+                  x2="99%"
+                  y2="100%"
+                  stroke="black"
+                  strokeWidth="2.5"
+                />
+              </>
+            )}
             {/* 赤い線 */}
             {isLineExist && (
               <line
