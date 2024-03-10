@@ -218,27 +218,25 @@ const NasaTLXQuestion: FC<QuestionProps> = (props) => {
               stroke="black"
               strokeWidth="5"
             />
-            {viewAnswerScale && (
-              <>
-                {LineList}
-                <line
-                  x1="1%"
-                  y1="50%"
-                  x2="1%"
-                  y2="100%"
-                  stroke="black"
-                  strokeWidth="2.5"
-                />
-                <line
-                  x1="99%"
-                  y1="50%"
-                  x2="99%"
-                  y2="100%"
-                  stroke="black"
-                  strokeWidth="2.5"
-                />
-              </>
-            )}
+            {viewAnswerScale && LineList}
+
+            <line
+              x1="1%"
+              y1="50%"
+              x2="1%"
+              y2="100%"
+              stroke="black"
+              strokeWidth="2.5"
+            />
+            <line
+              x1="99%"
+              y1="50%"
+              x2="99%"
+              y2="100%"
+              stroke="black"
+              strokeWidth="2.5"
+            />
+
             {/* 赤い線 */}
             {isLineExist && (
               <line
