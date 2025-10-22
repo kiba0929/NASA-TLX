@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "sample",
-  authDomain: "sample.firebaseapp.com",
-  projectId: "sample",
-  storageBucket: "sample.appspot.com",
-  messagingSenderId: "000000000000",
-  appId: "sample app id"
+  apiKey: "AIzaSyCo0oTW8kng4qiKn4xbt7DbR1UgJQIGlSE",
+  authDomain: "naelab-context-reply.firebaseapp.com",
+  projectId: "naelab-context-reply",
+  storageBucket: "naelab-context-reply.firebasestorage.app",
+  messagingSenderId: "751567003176",
+  appId: "1:751567003176:web:cc266fb51ada9ebacf5f1d"
 };
 
 // Initialize Firebase
